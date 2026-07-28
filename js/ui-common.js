@@ -3,7 +3,8 @@ $(function () {
   const $body = $("body");
   const POPCON_URL = "http://www.popcon.p-e.kr/";
   const BINGGRAE_URL = "https://alsrudwns1.github.io/Project-Binggrae/";
-  const U2BIO_URL = "../project/project_u2bio/index.html";
+  const U2BIO_URL =
+    "https://alsrudwns1.github.io/portfolio/project/project_u2bio/index.html";
 
   let typingStarted = false;
   // 모바일 화면 AOS 설정
