@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="description" content="웹 퍼블리셔 민경준의 개인 포트폴리오 페이지입니다." />
+
+  <title>민경준 | 웹 퍼블리셔 포트폴리오</title>
+
+  <!-- 파비콘 -->
+  <link rel="icon" href="images/common/favicon1.ico" />
+  <link rel="apple-touch-icon-precomposed" href="images/common/favicon1.ico" />
+
+  <meta property="og:title" content="민경준 | 웹 퍼블리셔 포트폴리오" />
+  <meta property="og:description" content="웹 퍼블리셔 민경준의 개인 포트폴리오 페이지입니다." />
+  <meta property="og:image" content="images/common/main_image.png" />
+  <!-- <meta property="og:url" content=""> -->
+  <meta property="og:type" content="website" />
+
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/featherlight.css">
+  <link rel="stylesheet" href="css/featherlight.gallery.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/featherlight.js"></script>
+  <script src="js/ui-common.js"></script>
+  <style></style>
+</head>
+
+<body>
+  <div id="skip_navi">
+    <a href="#container">본문바로가기</a>
+  </div>
+  <div id="wrap">
+    <header id="header">
+      <div class="inner">
+        <nav class="gnb_wrap" aria-label="헤더 메뉴">
+          <ul class="gnb">
+            <li><a href="#main_section">HOME</a></li>
+            <li><a href="#about_section">ABOUT</a></li>
+            <li><a href="#skill_section">SKILL</a></li>
+            <li><a href="#project_section">PROJECT</a></li>
+            <li><a href="#epilogue_section">EPILOGUE</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="container">
+      <section id="main_section" class="main_section">
+        <h1 class="blind">main section</h1>
+        <div class="inner">
+          <div class="title_wrap">
+            <!-- <h2 class="tit"><span class="power1">PUB</span> & <span class="power2">DEV</span> MIN<br />Portfolio</h2> -->
+            <!--Typed.js 사용-->
+            <h2 class="tit">
+              <span id="typing"></span>
+            </h2>
+            <p class="intro_txt">개발자로 성장 중인<br>웹 퍼블리셔 민경준 입니다.</p>
+          </div>
+          <div class="mockup_wrap">
+            <ul class="mockup_tab">
+              <li class="active">
+                <img class="pc_mockup" src="./images/main/mockup/popcon.png" alt="프로젝트 팝콘 PC 목업 화면" />
+                <img class="m_mockup" src="./images/main/mockup/m_popcon.png" alt="프로젝트 팝콘 모바일 목업 화면" />
+              </li>
+              <li>
+                <img class="pc_mockup" src="./images/main/mockup/binggrae.png" alt="프로젝트 빙그레 PC 목업 화면" />
+                <img class="m_mockup" src="./images/main/mockup/m_binggrae.png" alt="프로젝트 빙그레 모바일 목업 화면" />
+              </li>
+              <li>
+                <img class="pc_mockup" src="./images/main/mockup/u2bio.png" alt="프로젝트 유튜바이오 PC 목업 화면" />
+                <img class="m_mockup" src="./images/main/mockup/m_u2bio.png" alt="프로젝트 유튜바이오 모바일 목업 화면" />
+              </li>
+            </ul>
+            <ul class="tab_num_wrap">
+              <li class="tab_num1 active">01</li>
+              <li class="tab_num2">02</li>
+              <li class="tab_num3">03</li>
+            </ul>
+          </div>
+          <div class="scroll_down_wrap">
+            <p>VIEW MORE</p>
+            <img src="./images/common/scroll_down.svg" alt="scroll_down_img" />
+          </div>
+        </div>
+      </section>
+      <section id="about_section" class="about_section">
+        <h1 class="blind">about section</h1>
+        <div class="inner">
+          <div class="m_about_title">
+            <h2>ABOUT ME</h2>
+          </div>
+          <div class="face_wrap" data-aos="fade-right" data-aos-delay="100">
+            <img src="./images/main/민경준.jpg" alt="민경준 프로필 사진" />
+          </div>
+          <div class="about_wrap" data-aos="fade-left" data-aos-delay="1000">
+            <div class="about_title">
+              <h2>ABOUT ME</h2>
+              <p>안녕하세요, 웹 퍼블리셔 <span>민경준</span> 입니다.<br>
+                사용자 입장에서 편안한 경험을 제공하고, 다시 방문하고 싶어지는<br>
+                웹을 만드는 것을 목표로 합니다.<br>
+                저에게 개발이란 단순히 작업이 아닌, <br>
+                더 나은 방향으로 성장하기 위한 과정입니다.<br>
+                사용자, 개발자 모두에게 가치있는 웹을 만드는 개발자가 되고자 합니다.
+              </p>
+            </div>
+            <div class="about_etc">
+              <div class="education_wrap">
+                <h2>EDUCATION</h2>
+                <ul>
+                  <li>
+                    <span>2024.03 ~ 2024.10</span>
+                    <p>풀스택 개발자 양성 과정 수료</p>
+                  </li>
+                  <li>
+                    <span>2024.03</span>
+                    <p>인덕대학교 정보통신과 졸업</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="certificate_wrap">
+                <h2>CERTIFICATE</h2>
+                <ul>
+                  <li>
+                    <span>2022.08</span>
+                    <p>JLPT 2급</p>
+                  </li>
+                  <li>
+                    <span>2020.05</span>
+                    <p>컴퓨터활용능력 2급업</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="skill_section" class="skill_section">
+        <h1 class="blind">skill section</h1>
+        <div class="inner">
+          <div class="skill_title">
+            <h2>SKILL</h2>
+          </div>
+          <div class="skill_wrap">
+            <ul class="skill_list">
+              <li data-aos="fade-up" data-aos-delay="100">
+                <img src="./images/main/skill/HTML icon.png" alt="HTML 로고" />
+                <p class="pc_skill_txt">시멘틱 마크업을 기반으로<br>
+                  웹 표준을 준수한 퍼블리싱을 수행합니다.<br>
+
+                  퍼블리싱 전 폰트, 상호작용, 클래스 네이밍 등을<br>
+                  미리 정리한 기능정의서를 작성하여<br>
+                  일관성과 유지보수성을 고려한<br>
+                  체계적인 작업을 수행합니다.
+                </p>
+                <p class="m_skill_txt">
+                  시멘틱 마크업을 기반으로 웹 표준을 준수한 퍼블리싱을 합니다.<br>
+                  퍼블리싱 전 폰트, 상호작용, 클래스 네이밍 등을 미리 정리한 기능정의서를 작성하여<br>
+                  일관성과 유지보수성을 고려한 체계적인 작업을 수행합니다.
+                </p>
+              </li>
+              <li data-aos="fade-up" data-aos-delay="500">
+                <img src="./images/main/skill/CSS icon.png" alt="CSS 로고" />
+                <p class="pc_skill_txt">
+                  브라우저 간 일관된 UI 제공을 위해 <br>
+                  크로스 브라우징을 고려하여 스타일을 작성합니다.<br>
+                  PC, Tablet, Mobile 환경을 고려한 반응형 웹을<br>
+                  제작하며, 크롬, 엣지 등 주요 브라우저에서<br>
+                  테스트를 진행하고 UI 차이를 점검합니다.</p>
+                <p class="m_skill_txt"> 브라우저 간 일관된 UI 제공을 위해 <br>
+                  크로스 브라우징을 고려하여 스타일을 작성합니다.<br>
+                  PC, Tablet, Mobile 환경을 고려한 반응형 웹을 제작하며,<br>
+                  크롬, 엣지 등 주요 브라우저에서 테스트를 진행하고 UI 차이를 점검합니다.</p>
+              </li>
+              <li data-aos="fade-up" data-aos-delay="1000">
+                <img src="./images/main/skill/JS icon.png" alt="JS 로고" />
+                <p class="pc_skill_txt">
+                  네비게이션, 아코디언, 탭 메뉴 등<br>
+                  상호작용에 필수적인 주요 인터랙션을<br>
+                  플러그인에 의존하지 않고 직접 구현합니다.<br>
+                  jQuery를 활용한 UI 구현에 익숙하며,<br>
+                  JavaScript를 병행하여 동적인 기능을<br>
+                  구현합니다.
+                </p>
+                <p class="m_skill_txt">
+                  네비게이션, 아코디언, 탭 메뉴 등 상호작용에 필수적인 주요 인터랙션을<br>
+                  플러그인에 의존하지 않고 직접 구현합니다.<br>
+                  jQuery를 활용한 UI 구현에 익숙하며, JS를 병행하여 동적인 기능을 구현합니다.
+                </p>
+              </li>
+              <li data-aos="fade-up" data-aos-delay="1200">
+                <img src="./images/main/skill/Spring icon.png" alt="SPRINGBOOT 로고" />
+                <p class="pc_skill_txt">
+                  Spring Boot 기반의 MVC 구조를 이해하고,<br>
+                  게시판 CRUD 및 회원 기능을 구현할 수 있습니다.<br>
+                  AJAX를 활용한 비동기 데이터 처리로<br>
+                  동적인 UI를 구성합니다.<br>
+                  프론트엔드와 백엔드 간 데이터 흐름을<br>
+                  이해하고 연동합니다.
+                </p>
+                <p class="m_skill_txt">
+                  Spring Boot 기반의 MVC 구조를 이해하고,<br>
+                  게시판 CRUD 및 회원 기능을 구현할 수 있습니다.<br>
+                  AJAX를 활용한 비동기 데이터 처리로 동적인 UI를 구성합니다.<br>
+                  프론트엔드와 백엔드 간 데이터 흐름을 이해하고 연동합니다.
+                </p>
+              </li>
+              <li data-aos="fade-up" data-aos-delay="1700">
+                <img src="./images/main/skill/SQL icon.png" alt="SQL 로고" />
+                <p class="pc_skill_txt">
+                  SQL을 활용하여 DB 테이블을 설계하고,<br>
+                  외래 키, 시퀀스, 트리거 등을 활용한<br>
+                  데이터 구조를 구성합니다.<br>
+                  게시판 CRUD 로직을 구현한 경험이 있으며,<br>
+                  JOIN, 서브쿼리 등을 활용한 데이터 조회 경험이 있습니다.
+                </p>
+                <p class="m_skill_txt">
+                  SQL을 활용하여 DB 테이블을 설계하고<br>
+                  외래 키, 시퀀스, 트리거 등을 활용한 데이터 구조를 구성합니다.<br>
+                  게시판 및 사용자 기능 구현을 위한 CRUD 로직을 구현한 경험이 있으며,<br>
+                  JOIN, 서브쿼리 등을 활용한 데이터 조회 경험이 있습니다.
+                </p>
+              </li>
+              <li data-aos="fade-up" data-aos-delay="2200">
+                <img src="./images/main/skill/AWS icon.png" alt="AWS 로고" />
+                <p class="pc_skill_txt">AWS EC2 환경에 프로젝트를 배포하고<br>
+                  DB와 연동하여 실제 서비스 환경을<br>구축한 경험이 있습니다.<br>
+                  서비스가 실제로 동작하는 과정을 경험하며<br>
+                  개발부터 배포까지의 전체 흐름을 이해했습니다.</p>
+                <p class="m_skill_txt">
+                  AWS EC2 환경에 프로젝트를 배포하고<br>
+                  DB와 연동하여 실제 서비스 환경을 구축한 경험이 있습니다.<br>
+                  서비스가 실제로 동작하는 과정을 경험하며<br>
+                  개발부터 배포까지의 전체 흐름을 이해했습니다.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section id="project_section" class="project_section">
+        <h1 class="blind">project section</h1>
+        <div class="title_wrap">
+          <h2>PROJECT</h2>
+        </div>
+        <div class="inner">
+          <div class="project_name_wrap">
+            <ul class="project_name">
+              <li class="project_1 active">POPCON</li>
+              <li class="project_2">Binggrae</li>
+              <li class="project_3">U2bio</li>
+              <li class="project_4">Coming Soon</li>
+            </ul>
+          </div>
+          <div class="swiper projectSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="project_img">
+                  <img src="./images/main/popcon_main.png" alt="프로젝트 팝콘 메인화면" />
+                </div>
+                <div class="txt_wrap">
+                  <h3 class="sub_title">팝업 스토어의 모든 것, <span>POPCON</span></h3>
+                  <p>소비자는 팝업 스토어 예약 및 후기 작성, 포인트 기능을 이용 가능하고<br>
+                    판매자는 팝업 스토어 개최 및 홍보 기능을 이용 가능한<br>
+                    팝업 스토어 웹 / 앱 어플리케이션 입니다.</p>
+                  <ul class="etc_txt">
+                    <li>ㆍ제작 기간: 5주 </li>
+                    <li>ㆍ제작 참여율: 4인 팀 프로젝트 </li>
+                    <li>ㆍ담당 파트: 팝업 게시판, 관리자 페이지 및 마이페이지 구현 </li>
+                  </ul>
+                </div>
+                <div class="project_btn_wrap">
+                  <button class="btn eng_btn github_btn" data-url="https://github.com/DevEn9u/Project-Popcon"
+                    aria-label="GitHub 저장소 열기">Github</button>
+                  <button class="btn kor_btn popcon_devnote" aria-label="개발 노트 열기">개발 노트</button>
+                  <button class="btn eng_btn popcon_pc" aria-label="PC버전 사이트 열기">PC</button>
+                  <button class="btn kor_btn popcon_m" aria-label="모바일 버전 사이트 열기">모바일</button>
+                </div>
+              </div>
+              <div class="swiper-slide binggrae_slide">
+                <div class="project_img">
+                  <img src="./images/main/binggrae_main.png" alt="프로젝트 빙그레 메인화면" />
+                </div>
+                <div class="txt_wrap">
+                  <h3 class="sub_title"><span>빙그레</span> 사이트 <span class="p_br"><br></span> 클론코딩 프로젝트</h3>
+                  <p>빙그레(Binggrae) 공식 웹사이트를 참고하여<br>
+                    프론트엔드 UI를 구현한 클론 코딩 프로젝트입니다.</p>
+                  <ul class="etc_txt">
+                    <li>ㆍ제작 기간: 2주 </li>
+                    <li>ㆍ제작 참여율: 100% </li>
+                    <li>ㆍ구현 페이지: 메인 페이지, 로그인 페이지, 게시판 페이지 </li>
+                    <li>ㆍ사용 기술: HTML, CSS, JQUERY </li>
+                  </ul>
+                </div>
+                <div class="project_btn_wrap">
+                  <button class="btn eng_btn github_btn" data-url="https://github.com/alsrudwns1/Project-Binggrae"
+                    aria-label="GitHub 저장소 열기">Github</button>
+                  <button class="btn eng_btn binggrae_pc" aria-label="PC버전 사이트 열기">PC</button>
+                  <button class="btn kor_btn binggrae_m" aria-label="모바일 버전 사이트 열기">모바일</button>
+                </div>
+              </div>
+              <div class="swiper-slide u2_slide">
+                <div class="project_img">
+                  <img src="./images/main/u2_main.PNG" alt="프로젝트 팝콘 메인화면" />
+                </div>
+                <div class="txt_wrap">
+                  <h3 class="sub_title"><span>U2bio</span> 사이트 <span class="p_br"><br></span>클론코딩 프로젝트</h3>
+                  <p>U2bio 공식 웹사이트를 참고하여<br>
+                    프론트엔드 UI를 구현한 클론 코딩 프로젝트입니다.<br></p>
+                  <ul class="etc_txt">
+                    <li>ㆍ제작 기간: 1주 </li>
+                    <li>ㆍ제작 참여율: 100% </li>
+                    <li>ㆍ구현 페이지: 메인 페이지, 로그인 페이지, 게시판 페이지 </li>
+                    <li>ㆍ사용 기술: HTML, CSS, JQUERY </li>
+                  </ul>
+                </div>
+                <div class="project_btn_wrap">
+                  <button class="btn eng_btn u2bio_pc" aria-label="PC버전 사이트 열기">PC</button>
+                  <button class="btn kor_btn u2bio_m" aria-label="모바일 버전 사이트 열기">모바일</button>
+                </div>
+              </div>
+              <div class="swiper-slide slide_4">
+                <div class="project_img">
+                  <img src="./images/main/coming_soon.jpg" alt="준비중인 프로젝트" />
+                </div>
+                <div class="txt_wrap">
+                  <h3 class="sub_title">Coming Soon</h3>
+                  <p>새로운 프로젝트를 준비하고 있습니다!</p>
+                  <ul class="etc_txt">
+                    <li>ㆍ제작 기간: x주 </li>
+                    <li>ㆍ제작 참여율: 100% </li>
+                  </ul>
+                </div>
+                <div class="project_btn_wrap">
+                  <button class="btn eng_btn">Github</button>
+                  <button class="btn kor_btn">개발 노트</button>
+                  <button class="btn eng_btn">PC</button>
+                  <button class="btn kor_btn">모바일</button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-prev project_prev"></div>
+            <div class="swiper-button-next project_next"></div>
+          </div>
+          <!-- 풀스크린 모달 -->
+          <div class="modal popcon_modal">
+            <button class="popcon_close" aria-label="모달 닫기">
+              ✕
+            </button>
+            <!-- 프로젝트 팝콘 스와이퍼 -->
+            <div class="swiper popcon_swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="./images/main/popcon_manual/p_manual_1.png" alt="팝콘 기능정의서 1페이지">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/main/popcon_manual/p_manual_2.png" alt="팝콘 기능정의서 2페이지">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/main/popcon_manual/p_manual_3.png" alt="팝콘 기능정의서 3페이지">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/main/popcon_manual/p_manual_4.png" alt="팝콘 기능정의서 4페이지">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/main/popcon_manual/p_manual_5.png" alt="팝콘 기능정의서 5페이지">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/main/popcon_manual/p_manual_6.png" alt="팝콘 기능정의서 6페이지">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/main/popcon_manual/p_manual_7.png" alt="팝콘 기능정의서 7페이지">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/main/popcon_manual/p_manual_8.png" alt="팝콘 기능정의서 8페이지">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/main/popcon_manual/p_manual_9.png" alt="팝콘 기능정의서 9페이지">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/main/popcon_manual/p_manual_10.png" alt="팝콘 기능정의서 10페이지">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/main/popcon_manual/p_manual_11.png" alt="팝콘 기능정의서 11페이지">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/main/popcon_manual/p_manual_12.png" alt="팝콘 기능정의서 12페이지">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/main/popcon_manual/p_manual_13.png" alt="팝콘 기능정의서 13페이지">
+                </div>
+
+              </div>
+            </div>
+            <div class="swiper-button-prev popcon_prev"></div>
+            <div class="swiper-button-next popcon_next"></div>
+          </div>
+          <!-- 모바일 목업 -->
+          <div class="mobile_modal">
+            <button class="mobile_close" aria-label="모바일 목업 닫기">
+              ✕
+            </button>
+            <div class="mockup">
+              <div class="mobile_mockup">
+                <div class="iframe_url">
+                  <!-- <iframe src="https://alsrudwns1.github.io/Project-Binggrae/" title="빙그레 모바일">
+                  </iframe> -->
+                  <iframe id="mobile_iframe" src="" title="모바일 미리보기">
+                  </iframe>
+                </div>
+                <div class="home_btn"></div>
+                <div class="camera">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <div class="volume">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <div class="power">
+                  <span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="epilogue_section" class="epilogue_section">
+        <h1 class="blind">epilogue section</h1>
+        <div class="inner">
+          <div class="ep_title">
+            <h2>EPILOGUE</h2>
+          </div>
+          <div class="slogan_wrap">
+            <p id="ep_typing"></p>
+            <!--typed.js 사용-->
+            <!-- <h2>
+              Driven to <span>Learn</span>,<br>
+              Committed to <span>Publishing</span>
+            </h2> -->
+          </div>
+          <div class="ep_txt">
+            <p>아직은 배워가는 과정에 있지만<br>
+              <span class="power3">누구보다 잘 하고 싶다는 마음</span>으로 꾸준히 노력하고 있습니다.
+            </p>
+            <p>
+              늘 겸손한 자세로 배우고 노력을 게을리 하지 않으며<br>
+              <span class="power4">함께 성장할 수 있는 성실한 퍼블리셔</span>로 나아가겠습니다.
+            </p>
+          </div>
+          <div class="manual_btn_wrap">
+            <button class="btn manual_btn">사이트 기능정의서 보러가기</button>
+          </div>
+
+          <!-- 풀스크린 모달 -->
+          <div class="modal manual_modal">
+            <button class="modal_close" aria-label="기능정의서 닫기">
+              ✕
+            </button>
+            <!-- 기능정의서 스와이퍼 -->
+            <div class="swiper manual_swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="./images/main/manual/manual_1.png" alt="기능정의서 1페이지">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/main/manual/manual_2.png" alt="기능정의서 2페이지">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/main/manual/manual_3.png" alt="기능정의서 3페이지">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/main/manual/manual_4.png" alt="기능정의서 4페이지">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/main/manual/manual_5.png" alt="기능정의서 5페이지">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/main/manual/manual_6.png" alt="기능정의서 6페이지">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/main/manual/manual_7.png" alt="기능정의서 7페이지">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/main/manual/manual_8.png" alt="기능정의서 8페이지">
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-prev manual_prev"></div>
+            <div class="swiper-button-next manual_next"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--탑버튼-->
+    <aside>
+      <div class="down_top_btn">
+        <button class="down_btn">
+          <img src="images/common/top_arrow.svg" alt="top_arrow" />
+        </button>
+        <button class="top_btn">
+          <img src="images/common/top_arrow.svg" alt="top_arrow" />
+        </button>
+      </div>
+    </aside>
+
+    <footer id="footer">
+      <div class="inner">
+        <p>Thanks for reading</p>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
