@@ -1351,6 +1351,10 @@ iframe {
   .popcon_next{
     transform:scale(.7);
   }
+  .mobile_close {
+    top: 10px;
+    right: 20px;
+  }
 
   /* EPILOGUE SECTION */
   .inner .ep_title {
