@@ -448,11 +448,13 @@ body.scroll_lock {
   color: var(--point-color2);
 }
 .swiper-slide .project_img {
+  display: flex;
+  justify-content: center;
   width: 750px;
   margin: 0 auto 40px;
 }
 .project_img img {
-  width: 100%;
+  width: 75%;
   border-radius: 15px;
   max-height: 350px;
 }
@@ -462,9 +464,9 @@ body.scroll_lock {
 }
 .swiper-slide .txt_wrap .sub_title {
   font-family: "Title_Medium";
-  font-size: 58px;
+  font-size: 48px;
   color: var(--point-color1);
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .swiper-slide .txt_wrap .sub_title span {
   font-family: "poppins_Medium";
@@ -479,7 +481,7 @@ body.scroll_lock {
 }
 .swiper-slide .txt_wrap p {
   font-family: "Title_Medium";
-  font-size: 28px;
+  font-size: 20px;
   line-height: 1.6;
   color: black;
   margin-bottom: 30px;
@@ -488,7 +490,7 @@ body.scroll_lock {
   display: inline-block;
   text-align: left;
   font-family: "NanumSquareRoundR";
-  font-size: 20px;
+  font-size: 16px;
   color: var(--point-color1);
 }
 .project_prev, .project_next {
@@ -508,10 +510,10 @@ body.scroll_lock {
   color: var(--point-color2);
   border: none;
   border-radius: 10px;
-  width: 150px;
-  height: 50px;
+  width: 125px;
+  height: 40px;
   font-family: "poppins_Medium";
-  font-size: 24px;
+  font-size: 20px;
   letter-spacing: 0;
   cursor: pointer;
 }
