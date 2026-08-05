@@ -1309,6 +1309,9 @@ iframe {
   .swiper-slide .project_img {
     width: 80%;
   }
+  .project_img img {
+    width: 100%;
+  }
   .swiper-slide .txt_wrap .sub_title {
     font-size: 32px;
   }
