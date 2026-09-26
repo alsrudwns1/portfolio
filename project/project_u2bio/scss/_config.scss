@@ -1,0 +1,59 @@
+/* 변수 */
+$point_color1: #00a651;
+$point_color2: #8bc63f;
+$point_color3: #2dbab4;
+$gray999: #999;
+$gray666: #666;
+$gray222: #222;
+$black: #000;
+
+$mobile_padding: 0 15px;
+$fast_ani: all 0.2s;
+$slow_ani: all 0.5s;
+
+/* 믹스인 */
+// 메인슬라이더 분기점
+@mixin mainslider_resize {
+  @media (max-width: 1440px) {
+    @content;
+  }
+}
+// 태블릿 분기점
+@mixin tablet_resize {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+// 모바일 분기점
+@mixin mobile_resize {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@mixin section_title {
+  font-size: 44px;
+  font-weight: 700;
+  color: $black;
+  margin-bottom: 40px;
+
+  @include tablet_resize {
+    font-size: 38px;
+    margin-bottom: 30px;
+  }
+  @include mobile_resize {
+    font-size: 33px;
+  }
+}
+
+@mixin board_title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

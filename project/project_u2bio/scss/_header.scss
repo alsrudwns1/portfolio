@@ -1,0 +1,446 @@
+@use "config" as *;
+
+#header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  transition: $fast_ani;
+
+  &.fixed {
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    .inner .logo a {
+      background: url(../images/svg_image/logo.svg) no-repeat left top / 100%;
+    }
+    .gnb_wrap .gnb > li > a {
+      color: $black;
+    }
+
+    .lang_wrap {
+      .login {
+        color: $black;
+      }
+
+      .lang_btn {
+        background: #f7f7f7;
+        color: black;
+        border-color: #f7f7f7;
+        &::after {
+          background: black;
+        }
+      }
+    }
+  }
+}
+
+#header .inner {
+  @include inner;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  .logo {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 115px;
+
+    a {
+      display: block;
+      height: 52px;
+      -webkit-mask: url(../images/svg_image/logo.svg) no-repeat left top / 100%;
+      mask: url(../images/svg_image/logo.svg) no-repeat left top / 100%;
+      background: white;
+    }
+  }
+  .m_gnb_wrap {
+    display: none;
+  }
+}
+
+#header .gnb_wrap > .gnb {
+  display: flex;
+  > li {
+    position: relative;
+    > a {
+      display: block;
+      line-height: 100px;
+      padding: 0 50px;
+      color: white;
+      font-weight: 500;
+    }
+
+    .depth2 {
+      position: absolute;
+      left: 0;
+      top: 100px;
+      width: 100%;
+      max-height: 0;
+      overflow: hidden;
+      background: #50b779;
+      text-align: center;
+      border-radius: 0 30px 30px 30px;
+      transition: $fast_ani;
+      > li + li {
+        margin-top: 15px;
+      }
+      a {
+        display: block;
+        color: white;
+        font-size: 16px;
+      }
+    }
+
+    &:hover .depth2 {
+      max-height: 240px;
+      padding: 20px 0;
+    }
+  }
+}
+
+#header .lang_wrap {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  &.on {
+    .lang_btn {
+      background: #f7f7f7;
+      color: $black;
+      border-radius: 17px 17px 0 0;
+      border-color: #f7f7f7;
+      &::after {
+        transform: rotate(180deg);
+        background: $black;
+      }
+    }
+
+    .lang {
+      max-height: 80px;
+    }
+  }
+
+  .lang_btn {
+    height: 34px;
+    line-height: 32px;
+    width: 82px;
+    padding: 0 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0 8px;
+    background: none;
+    border: 1px solid white;
+    border-radius: 17px;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    transition: $fast_ani;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 7px;
+      height: 6px;
+
+      -webkit-mask: url(../images/svg_image/arrow_down.svg) no-repeat;
+      mask: url(../images/svg_image/arrow_down.svg) no-repeat;
+      background: white;
+      transition: $fast_ani;
+    }
+  }
+
+  .lang {
+    position: absolute;
+    left: 0;
+    top: 34px;
+    width: 82px;
+    max-height: 0;
+    overflow: hidden;
+    background: #f7f7f7;
+    border-radius: 0 0 17px 17px;
+    transition: $fast_ani;
+
+    a {
+      display: block;
+      padding: 0 16px;
+      font-size: 16px;
+      color: $gray666;
+    }
+  }
+
+  .login {
+    margin-left: 10px;
+    color: white;
+  }
+
+  .open_btn {
+    display: none;
+  }
+}
+
+/* 서브 페이지 헤더 */
+#header.sub_header {
+  background: white;
+
+  .logo a {
+    background: url(../images/svg_image/logo.svg) no-repeat left top / 100%;
+  }
+
+  .gnb > li > a {
+    color: $black;
+  }
+
+  .lang_wrap {
+    .login {
+      color: $black;
+    }
+
+    .lang_btn {
+      background: #f7f7f7;
+      color: black;
+      border-color: #f7f7f7;
+
+      &::after {
+        background: black;
+      }
+    }
+  }
+}
+
+/* 태블릿 분기점 */
+@media (max-width: 1200px) {
+  #header {
+    .inner {
+      height: 80px;
+
+      .logo {
+        width: 100px;
+        a {
+          height: 45px;
+        }
+      }
+
+      .gnb_wrap .gnb {
+        display: none;
+      }
+
+      .lang_wrap {
+        z-index: 10;
+      }
+    }
+
+    &.fixed .lang_wrap .open_btn {
+      background: #7fd1a6;
+      border: none;
+    }
+
+    &.on .lang_btn {
+      background: #f7f7f7;
+      color: black;
+      border-color: #f7f7f7;
+
+      &::after {
+        background: black;
+      }
+    }
+  }
+
+  #header .lang_wrap .open_btn {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 3px 0;
+    width: 34px;
+    height: 34px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 50%;
+    background: none;
+    margin-left: 16px;
+
+    i {
+      width: 14px;
+      height: 2px;
+      border-radius: 2px;
+      background: white;
+      transition: $fast_ani;
+    }
+
+    &.on {
+      background: #7fd1a6;
+      border: none;
+      i:nth-of-type(1) {
+        transform: translateY(5px) rotate(45deg);
+      }
+      i:nth-of-type(2) {
+        opacity: 0;
+      }
+      i:nth-of-type(3) {
+        transform: translateY(-5px) rotate(-45deg);
+      }
+    }
+  }
+
+  #header .inner .m_gnb_wrap {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: white;
+    height: 100%;
+    padding-top: 70px;
+    transform: translateX(100%);
+    transition: $slow_ani;
+    opacity: 0;
+
+    &.on {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    .scroll {
+      overflow: auto;
+      height: 100%;
+    }
+  }
+
+  #header .inner .m_gnb_wrap .m_gnb {
+    > li {
+      > a {
+        line-height: 60px;
+        display: block;
+        padding: $mobile_padding;
+        font-size: 20px;
+        color: $black;
+        font-weight: 500;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          right: 15px;
+          top: 50%;
+          width: 14px;
+          height: 2px;
+          background: black;
+          margin-top: -1px;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          right: 21px;
+          top: 50%;
+          width: 2px;
+          height: 14px;
+          margin-top: -7px;
+          background: black;
+          transition: $fast_ani;
+        }
+      }
+      &.on {
+        .depth2 {
+          max-height: 240px;
+          padding: 20px;
+        }
+        > a::after {
+          width: 14px;
+          height: 2px;
+          right: 15px;
+          margin-top: -1px;
+          background: $point_color1;
+        }
+      }
+      .depth2 {
+        padding: 0 20px;
+        max-height: 0;
+        overflow: hidden;
+        transition: $slow_ani;
+        background: #f8f8f8;
+        a {
+          font-size: 14px;
+          color: $gray999;
+          display: block;
+          padding-left: 13px;
+          line-height: 40px;
+          position: relative;
+          &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 4px;
+            height: 4px;
+            background: $gray999;
+            border-radius: 50%;
+            margin-top: -2px;
+          }
+        }
+      }
+    }
+  }
+
+  // 서브페이지 헤더
+  #header.sub_header .open_btn {
+    background: #7fd1a6;
+    border: none;
+  }
+}
+
+/* 모바일 분기점 */
+@media (max-width: 767px) {
+  #header .inner {
+    height: 50px;
+
+    .logo {
+      left: 15px;
+      width: 60px;
+      a {
+        height: 28px;
+      }
+    }
+
+    .lang_wrap {
+      right: 15px;
+
+      .lang_btn {
+        height: 24px;
+        font-size: 13px;
+        width: 61px;
+        padding: 0 10px;
+      }
+
+      &.on {
+        .lang_btn {
+          border-radius: 10px 10px 0 0;
+        }
+      }
+
+      .lang {
+        width: 61px;
+        top: 24px;
+        border-radius: 0 0 10px 10px;
+        a {
+          padding: 0 10px;
+          font-size: 13px;
+          line-height: 30px;
+        }
+      }
+
+      .open_btn {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  // 서브페이지 헤더
+  #header.sub_header .lang_wrap .login {
+    font-size: 13px;
+  }
+}

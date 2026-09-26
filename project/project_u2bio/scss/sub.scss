@@ -1,0 +1,845 @@
+@use "header";
+@use "footer";
+@use "config" as *;
+
+// 로그인 페이지
+.login_page {
+  .contents {
+    padding: 100px 0;
+
+    .inner {
+      max-width: 448px;
+      margin: 0 auto;
+
+      @include mobile_resize {
+        padding: $mobile_padding;
+      }
+      .login_area {
+        border: 1px solid #c6c6c6;
+        border-radius: 6px;
+        padding: 24px;
+
+        h2 {
+          font-size: 20px;
+          font-weight: 500;
+          text-align: center;
+        }
+
+        .input_wrap1 {
+          border-radius: 6px 6px 0 0;
+          border: 1px solid #dadada;
+          margin-top: 30px;
+        }
+        .input_wrap2 {
+          border-radius: 0 0 6px 6px;
+          border: 1px solid #dadada;
+          border-top: none;
+          margin-bottom: 15px;
+        }
+
+        input[type="text"] {
+          width: 100%;
+          border: none;
+          background: none;
+          height: 48px;
+          padding: 0 20px;
+        }
+
+        .row3 {
+          font-size: 15px;
+        }
+
+        .login_btn {
+          display: block;
+          line-height: 52px;
+          background-color: $point_color1;
+          color: #fff;
+          text-align: center;
+          border-radius: 6px;
+          margin-top: 30px;
+        }
+      }
+
+      .link_wrap {
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+        gap: 0 20px;
+
+        li {
+          position: relative;
+
+          & + li::before {
+            content: "";
+            position: absolute;
+            left: -10px;
+            top: 50%;
+            transform: translateY(-50%);
+            margin-top: 2px;
+            width: 1px;
+            height: 14px;
+            background: #dadada;
+          }
+
+          a {
+            font-size: 15px;
+            color: $gray222;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 보도자료 - 글 목록 페이지
+.release {
+  padding: 180px 0 160px;
+  font-size: 18px;
+  color: $black;
+  line-height: 28px;
+
+  @include tablet_resize {
+    padding-top: 80px;
+  }
+  @include mobile_resize {
+    padding-top: 50px;
+  }
+
+  .sub_top {
+    @include inner;
+    width: 100%;
+
+    @include tablet_resize {
+      padding: 70px 0 45px;
+    }
+
+    .inner {
+      @include inner;
+      position: relative;
+      font-size: 40px;
+      color: $black;
+      font-weight: 700;
+      line-height: 48px;
+      padding-bottom: 65px;
+      z-index: 1;
+      text-shadow:
+        #fff 0 0 2px,
+        #fff 0 0 2px,
+        #fff 0 0 2px;
+
+      @include mobile_resize {
+        padding: $mobile_padding;
+      }
+    }
+
+    h2 {
+      font-size: 40px;
+      font-weight: 700;
+      color: $black;
+
+      @include tablet_resize {
+        font-size: 30px;
+      }
+    }
+    .txt {
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 22px;
+      margin: 30px 0 40px;
+
+      @include tablet_resize {
+        font-size: 18px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+      @include mobile_resize {
+        font-size: 14px;
+      }
+    }
+    .location {
+      font-size: 15px;
+      color: $point_color1;
+
+      @include tablet_resize {
+        font-size: 14px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+
+      strong {
+        font-weight: 700;
+      }
+      span {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        background: url(../images/svg_image/icon_locat_slide.svg) no-repeat 50%
+          50%;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .sub_visual {
+    height: 400px;
+    background: url(../images/release_list_img/bg_aside04.png) no-repeat 50%
+      50% / cover;
+
+    @include tablet_resize {
+      height: 240px;
+      padding-top: 0;
+    }
+    @include mobile_resize {
+      height: 370px;
+      padding-top: 270px;
+    }
+
+    .inner {
+      position: relative;
+      @include inner;
+      padding-top: 200px;
+
+      @include tablet_resize {
+        padding-bottom: 0;
+        padding-top: 100px;
+      }
+      @include mobile_resize {
+        padding-top: 0;
+      }
+    }
+
+    .sub_tab {
+      display: flex;
+      gap: 0 73px;
+
+      @include tablet_resize {
+        gap: 0 40px;
+      }
+      @include mobile_resize {
+        display: none;
+      }
+
+      li {
+        & + li {
+          position: relative;
+
+          &::before {
+            content: "";
+            position: absolute;
+            left: -37px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: #fff;
+
+            @include tablet_resize {
+              left: -22px;
+              height: 4px;
+              width: 4px;
+            }
+          }
+        }
+
+        a {
+          position: relative;
+          display: block;
+          line-height: 70px;
+          border-radius: 35px 35px 35px 0;
+          font-weight: 500;
+          font-size: 22px;
+          color: white;
+
+          @include tablet_resize {
+            font-size: 15px;
+            line-height: 60px;
+          }
+        }
+
+        &.active a {
+          border-radius: 35px 35px 35px 0;
+          font-weight: 600;
+          padding: 0 60px;
+          background: #fff;
+          color: $point_color3;
+
+          @include tablet_resize {
+            padding: 0 30px;
+          }
+        }
+      }
+    }
+
+    // 모바일 - 보도자료 버튼
+    .sub_tab2 {
+      display: none;
+
+      @include mobile_resize {
+        display: block;
+        position: relative;
+        z-index: 100;
+
+        .tab_btn {
+          width: 100%;
+          height: 50px;
+          color: $point_color3;
+          font-size: 15px;
+          font-weight: 700;
+          border-radius: 25px;
+          background: white;
+          border: none;
+          position: relative;
+
+          &::after {
+            content: "";
+            width: 10px;
+            height: 10px;
+            -webkit-mask: url(../images/svg_image/arrow_btm.svg) no-repeat 0 0 /
+              100%;
+            mask: url(../images/svg_image/arrow_btm.svg) no-repeat 0 0 / 100%;
+            background: $point_color3;
+            position: absolute;
+            right: 40px;
+            top: 50%;
+            margin-top: -5px;
+            transition: $slow_ani;
+          }
+        }
+
+        .tab_list {
+          transition: $slow_ani;
+          max-height: 0;
+          overflow: hidden;
+          position: absolute;
+          left: 0;
+          top: 25px;
+          width: 100%;
+          background: white;
+          z-index: -1;
+          border-radius: 0 0 25px 25px;
+
+          a {
+            display: block;
+            line-height: 50px;
+            padding: 0 20px 0 40px;
+            font-size: 15px;
+            color: $gray999;
+            font-weight: 500;
+          }
+        }
+
+        &.on {
+          .tab_btn {
+            box-shadow: rgba(0, 0, 0, 0.07) 0 3px 10px;
+
+            &::after {
+              transform: rotate(180deg) translateY(3px);
+            }
+          }
+
+          .tab_list {
+            max-height: 300px;
+            padding: 40px 0 10px;
+          }
+        }
+      }
+    }
+
+    // 보도자료 이미지 모음.
+    .img_wrap {
+      position: absolute;
+      right: 0;
+      width: 50%;
+      top: -220px;
+
+      @include mobile_resize {
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 90%;
+        top: -325px;
+      }
+
+      @keyframes ani_clude {
+        0% {
+          transform: translate(0, 0);
+        }
+        50% {
+          transform: translate(-50px, 0);
+        }
+        100% {
+          transform: translate(0, 0);
+        }
+      }
+      @keyframes ani_rotate {
+        0% {
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(30deg);
+        }
+        100% {
+          transform: rotate(0deg);
+        }
+      }
+      @keyframes ani_updown {
+        0% {
+          transform: translate(0, 0) scale(1);
+        }
+        50% {
+          transform: translate(0, 30px) scale(0.85);
+        }
+        100% {
+          transform: translate(0, 0) scale(1);
+        }
+      }
+
+      .basic_img {
+        max-width: 100%;
+      }
+      .clude_1 {
+        position: absolute;
+        top: 236px;
+        left: 10px;
+        animation: ani_clude 10s infinite;
+
+        @include mobile_resize {
+          width: 60px;
+          top: 35%;
+          left: 50%;
+          margin-left: -150px;
+        }
+      }
+      .clude_2 {
+        position: absolute;
+        top: 80px;
+        left: 280px;
+        animation: ani_clude 10s infinite;
+
+        @include mobile_resize {
+          width: 30px;
+          top: 12%;
+          left: 50%;
+          margin-left: -30px;
+        }
+      }
+      .clude_3 {
+        position: absolute;
+        top: 50px;
+        right: 100px;
+        animation: ani_clude 10s infinite;
+
+        @include mobile_resize {
+          width: 40px;
+          top: 15%;
+          left: 50%;
+          margin-left: 100px;
+          right: auto;
+        }
+      }
+      .notepad {
+        position: absolute;
+        top: 150px;
+        right: 50px;
+        animation: ani_rotate 4s infinite;
+
+        @include mobile_resize {
+          width: 50px;
+          top: 15%;
+          left: 50%;
+          margin-left: 120px;
+          right: auto;
+        }
+      }
+      .speaker {
+        position: absolute;
+        bottom: 0;
+        right: 150px;
+        animation: ani_updown 10s infinite;
+
+        @include mobile_resize {
+          width: 120px;
+          left: 50%;
+          top: 15%;
+          right: auto;
+        }
+      }
+    }
+  }
+  .contents {
+    .inner {
+      @include inner;
+
+      @include tablet_resize {
+        padding-top: 0;
+      }
+    }
+
+    .board_search {
+      background-color: #f8f8f8;
+      margin: 120px 0 80px;
+
+      @include mobile_resize {
+        padding: 15px;
+        margin: 40px 0 30px;
+      }
+
+      .select_wrap {
+        width: 240px;
+
+        @include mobile_resize {
+          width: 30%;
+          height: 40px;
+        }
+
+        select {
+          @include mobile_resize {
+            height: 40px;
+            font-size: 16px;
+          }
+        }
+      }
+
+      .search_wrap {
+        @include mobile_resize {
+          width: 60%;
+          height: 40px;
+
+          input[type="search"],
+          .search_btn {
+            height: 38px;
+          }
+        }
+      }
+    }
+
+    .board_list {
+      border-top: black 3px solid;
+
+      .tb_num_wrap {
+        width: 120px;
+
+        @include tablet_resize {
+          width: 80px;
+        }
+        @include mobile_resize {
+          display: none;
+        }
+      }
+      .tb_view_wrap {
+        width: 200px;
+
+        @include tablet_resize {
+          width: 130px;
+        }
+        @include mobile_resize {
+          width: 80px;
+        }
+      }
+      .tb_date_wrap {
+        width: 180px;
+
+        @include tablet_resize {
+          width: 120px;
+        }
+        @include mobile_resize {
+          width: 80px;
+        }
+      }
+
+      thead th {
+        height: 100px;
+        background-color: white;
+        font-size: 20px;
+        border-bottom: #707070 1px solid;
+        text-align: center;
+
+        @include tablet_resize {
+          height: 70px;
+          font-size: 17px;
+        }
+        @include mobile_resize {
+          font-size: 14px;
+          font-weight: 700;
+
+          &:first-child {
+            display: none;
+          }
+        }
+      }
+      tbody {
+        tr {
+          height: 100px;
+          font-size: 18px;
+
+          @include tablet_resize {
+            height: 70px;
+            font-size: 16px;
+          }
+          @include mobile_resize {
+            height: 50px;
+            font-size: 13px;
+          }
+
+          td {
+            border-bottom: #707070 1px solid;
+            @include mobile_resize {
+              &:first-child {
+                display: none;
+              }
+            }
+          }
+          .tb_tit {
+            position: relative;
+            padding-right: 32px;
+            max-width: 100%;
+            @include board_title;
+            text-align: left;
+
+            @include mobile_resize {
+              padding-right: 25px;
+            }
+
+            a {
+              color: $gray666;
+            }
+          }
+          .tb_date {
+            color: $gray666;
+          }
+        }
+      }
+    }
+
+    // 페이지 넘기기 버튼.
+    .board_bottom {
+      .paging {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+
+        a {
+          display: block;
+          width: 32px;
+          height: 32px;
+          line-height: 32px;
+          text-align: center;
+          font-size: 17px;
+          color: $gray999;
+          font-weight: 300;
+          border-radius: 50%;
+        }
+        .first_arrow {
+          background: #fff url(../images/svg_image/page_two.svg) no-repeat 50%
+            50%;
+        }
+        .prev_arrow {
+          background: #fff url(../images/svg_image/page_one.svg) no-repeat 50%
+            50%;
+          margin-right: 20px;
+        }
+        .next_arrow {
+          background: #fff url(../images/svg_image/page_one.svg) no-repeat 50%
+            50%;
+          transform: rotate(180deg);
+          margin-left: 20px;
+        }
+        .end_arrow {
+          background: #fff url(../images/svg_image/page_two.svg) no-repeat 50%
+            50%;
+          transform: rotate(180deg);
+        }
+        .bottom_nums {
+          display: flex;
+
+          .on {
+            background-color: #009c47;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 보도자료 - 글 조회 페이지
+.board_view {
+  border-top: $black 2px solid;
+  margin-top: 120px;
+
+  @include tablet_resize {
+    margin-top: 80px;
+  }
+  @include mobile_resize {
+    margin-top: 40px;
+  }
+
+  thead {
+    th {
+      text-align: left;
+      border-bottom: #ddd 1px solid;
+      position: relative;
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 38px;
+      padding: 40px 160px 40px 40px;
+
+      @include tablet_resize {
+        font-size: 26px;
+        line-height: 30px;
+        padding: 20px 100px 20px 20px;
+      }
+      @include mobile_resize {
+        font-size: 18px;
+        line-height: 24px;
+        padding: 10px;
+      }
+
+      .view_date {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        font-size: 18px;
+        color: $gray999;
+        font-weight: 300;
+
+        @include tablet_resize {
+          top: 20px;
+          right: 20px;
+          font-size: 14px;
+        }
+        @include mobile_resize {
+          position: relative;
+          top: 0;
+          right: 0;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  tbody {
+    td {
+      text-align: left;
+      border-bottom: #ddd 1px solid;
+      padding: 80px 40px;
+
+      @include mobile_resize {
+        padding: 40px 20px;
+      }
+
+      .view_img {
+        text-align: center;
+        max-width: 100%;
+
+        img {
+          width: 1000px;
+        }
+      }
+
+      p {
+        font-family: "Malgun Gothic";
+        line-height: 28px;
+        font-size: 14px;
+        margin-top: 30px;
+      }
+    }
+  }
+
+  .prev_next {
+    padding: 0;
+
+    dl {
+      display: flex;
+      border-top: #ddd 1px solid;
+
+      &:first-child {
+        border-top: 0;
+      }
+
+      dt {
+        padding: 20px 0;
+        color: $gray999;
+        width: 200px;
+        text-align: center;
+        font-weight: 500;
+        background: #f8f8f8;
+
+        @include tablet_resize {
+          padding: 15px 0;
+          width: 160px;
+        }
+        @include mobile_resize {
+          font-size: 13px;
+          padding: 10px 0;
+          width: 80px;
+        }
+      }
+
+      dd {
+        padding: 20px 0;
+        color: $gray999;
+        width: calc(100% - 200px);
+        padding-left: 50px;
+
+        @include tablet_resize {
+          padding: 15px 0;
+          width: calc(100% - 160px);
+          padding-left: 30px;
+        }
+        @include mobile_resize {
+          font-size: 13px;
+          padding: 10px 0;
+          width: calc(100% - 80px);
+          padding-left: 10px;
+        }
+
+        a {
+          display: block;
+          @include board_title;
+          color: $gray666;
+        }
+      }
+    }
+  }
+
+  .list_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    color: #fff;
+    font-weight: 700;
+    line-height: 60px;
+    height: 60px;
+    width: 185px;
+    background: linear-gradient(-115deg, #008a43, #2ad47d);
+    border-radius: 30px;
+    margin: 40px auto 0;
+
+    @include tablet_resize {
+      line-height: 50px;
+      height: 50px;
+      width: 180px;
+      margin-top: 30px;
+    }
+    @include mobile_resize {
+      font-size: 14px;
+      line-height: 40px;
+      height: 40px;
+      width: 160px;
+      margin-top: 30px;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 18px;
+      height: inherit;
+      background: url(../images/svg_image/icon_list.svg) no-repeat 50% 50% /
+        contain;
+      margin-right: 10px;
+    }
+  }
+}
