@@ -19,7 +19,14 @@ $(function () {
     $(".down_btn").toggle(sct === 0);
     $(".top_btn").toggle(sct > 0);
 
-    // 에필로그 섹션 도달 시 타이핑 애니메이션 시작
+    // 스킬 섹션 페이드업 애니메이션
+    const skillTop = $("#skill_section").offset().top;
+    const winH = $window.height();
+    if (sct + winH * 0.8 > skillTop) {
+      $("#skill_section").addClass("on");
+    }
+
+    // 에필로그 섹션 타이핑 애니메이션
     if (!typingStarted) {
       const epTop = $(".epilogue_section").offset().top;
       const winH = $window.height();
@@ -103,16 +110,9 @@ $(function () {
     window.open($(this).data("url"), "_blank", "noopener,noreferrer");
   });
 
-  // 팝콘 PC, 모바일
+  // 팝콘
   $(".popcon_pc").on("click", function () {
     window.open(POPCON_URL, "_blank", "noopener,noreferrer");
-  });
-  $(".popcon_m").on("click", function () {
-    window.open(
-      POPCON_URL,
-      "mobileView",
-      "width=390,height=844,noopener,noreferrer",
-    );
   });
 
   // 빙그레 PC
