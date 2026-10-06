@@ -524,15 +524,27 @@
   padding: 0 20px;
   line-height: 40px;
 }
-#footer .inner .footer_bottom .top_btn {
+#footer .inner .footer_bottom .top_btn,
+#footer .inner .footer_bottom .bottom_btn {
   position: fixed;
   z-index: 9999;
   right: 50px;
   bottom: 50px;
   width: 70px;
   height: 70px;
-  background: #76ca9e url(../images/svg_image/arrow_top.svg) no-repeat 50% 50%;
+  background-color: #76ca9e;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
   border-radius: 50%;
+}
+#footer .inner .footer_bottom .top_btn {
+  display: none;
+  background-image: url(../images/svg_image/arrow_top.svg);
+}
+#footer .inner .footer_bottom .bottom_btn {
+  display: none;
+  background-image: url(../images/svg_image/arrow_top.svg);
+  transform: rotate(180deg);
 }
 
 /* 태블릿 분기점 */

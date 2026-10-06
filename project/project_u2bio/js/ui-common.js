@@ -170,10 +170,36 @@ $(function () {
     $(this).parent().toggleClass("on");
   });
 
-  //#footer .top_btn 클릭 시 위로 애니메이션 되며 올라가기
+  // 스크롤 위치에 따라 Top, Bottom 버튼 전환
+  function toggle_btn() {
+    const sct = $(window).scrollTop();
+    if (sct <= 0) {
+      $(".top_btn").hide();
+      $(".bottom_btn").show();
+    } else {
+      $(".top_btn").show();
+      $(".bottom_btn").hide();
+    }
+  }
+  $(window).on("scroll", toggle_btn);
+  toggle_btn();
+
+  // 페이지 상단 이동
   $("#footer .top_btn").on("click", function (e) {
     e.preventDefault();
-    $("html, body").animate({ scrollTop: 0 });
+
+    $("html, body").animate({
+      scrollTop: 0,
+    });
+  });
+
+  // 페이지 하단 이동
+  $("#footer .bottom_btn").on("click", function (e) {
+    e.preventDefault();
+
+    $("html, body").animate({
+      scrollTop: $(document).height() - $(window).height(),
+    });
   });
 
   // 모바일 서브 탭 메뉴

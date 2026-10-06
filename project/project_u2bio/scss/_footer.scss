@@ -160,15 +160,27 @@
     }
   }
 
-  .top_btn {
+  .top_btn,
+  .bottom_btn {
     position: fixed;
     z-index: 9999;
     right: 50px;
     bottom: 50px;
     width: 70px;
     height: 70px;
-    background: #76ca9e url(../images/svg_image/arrow_top.svg) no-repeat 50% 50%;
+    background-color: #76ca9e;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
     border-radius: 50%;
+  }
+  .top_btn {
+    display: none;
+    background-image: url(../images/svg_image/arrow_top.svg);
+  }
+  .bottom_btn {
+    display: none;
+    background-image: url(../images/svg_image/arrow_top.svg);
+    transform: rotate(180deg);
   }
 }
 
