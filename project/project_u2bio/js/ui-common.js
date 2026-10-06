@@ -183,20 +183,16 @@ $(function () {
   }
   $(window).on("scroll", toggle_btn);
   toggle_btn();
-
-  // 페이지 상단 이동
+  // 탑버튼
   $("#footer .top_btn").on("click", function (e) {
     e.preventDefault();
-
     $("html, body").animate({
       scrollTop: 0,
     });
   });
-
-  // 페이지 하단 이동
+  // 바텀버튼
   $("#footer .bottom_btn").on("click", function (e) {
     e.preventDefault();
-
     $("html, body").animate({
       scrollTop: $(document).height() - $(window).height(),
     });
